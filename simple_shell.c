@@ -58,7 +58,7 @@ int main(int argc, char* argv[], char** env)
 				char * argu[]={bufflptr,NULL};
 				execve(bufflptr,argu, NULL);
 
-				write(STDERR_FILENO, "execve error\n",13);
+				perror("execve failed");
 				free(bufflptr);
 				exit(EXIT_FAILURE);
 			}
