@@ -5,6 +5,7 @@
 #include <sys/wait.h>
 
 
+
 /**
  * main - Control will enter this program from here
  * 
@@ -12,7 +13,7 @@
 
 int main(int argc, char* argv[], char** env)
 {
-	char *prompt = "$ ";
+	char *prompt = "dohardthings$ ";
 	char *bufflptr=NULL;
 	ssize_t bufferSize=0;
 	ssize_t gtlninput;
@@ -22,8 +23,8 @@ int main(int argc, char* argv[], char** env)
 	while(1)
 	{
 		//Prompt to take input
-		write(STDOUT_FILENO,prompt,2);
-	
+		write(STDOUT_FILENO,prompt,14);
+
 
 		//Getiing input from standard input
 		gtlninput=getline(&bufflptr,&bufferSize,stdin);
