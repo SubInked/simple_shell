@@ -64,7 +64,7 @@ int main(int argc, char* argv[], char** env)
 			else
 			{
 				int status;
-				waitpid(pid,&status,0);
+				result=waitpid(pid,&status,0);
 				if(result ==-1)
 				{
 					perror("waitpid failed");
